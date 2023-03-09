@@ -1,0 +1,5 @@
+[
+    {"username":"Jack","password":"pass1234","token":"token","role":{"name":"admin","permissions":["home","users","catalogs"]}},
+    {"username":"Joni","password":"pass1234","token":"token","role":{"name":"moderator","permissions":["home","catalogs"]}},
+    {"username":"Jimmy","password":"pass1234","token":"token","role":{"name":"guest","permissions":["home"]}}
+]
