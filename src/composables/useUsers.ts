@@ -8,7 +8,7 @@ export const useUsers = () => {
   const { users, isLoading } = storeToRefs(store);
 
   onMounted(() => {
-    getAllUsers();
+    getAllUsers("users");
   });
   onUnmounted(() => store.$reset());
 

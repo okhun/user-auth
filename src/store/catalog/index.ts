@@ -1,18 +1,20 @@
-import { useGet } from "@/shared/fetch";
 import { defineStore } from "pinia";
+import { useGet } from "@/shared/fetch";
 import { State } from "./types";
 
-export const useUserStore = defineStore("userStore", {
+export const useCatalogstore = defineStore("catalog", {
   state: (): State => ({
-    users: [],
+    catalogs: [],
     isLoading: true,
+    total: 0,
   }),
   actions: {
-    getAllUsers(url: string) {
+    getAllCatalogs(url: string) {
       this.isLoading = true;
       useGet(url)
         .then((data) => {
-          this.users = data.users;
+          this.catalogs = data.products;
+          this.total = data.total;
         })
         .finally(() => (this.isLoading = false));
     },
